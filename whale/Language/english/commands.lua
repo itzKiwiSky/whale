@@ -10,7 +10,7 @@ local commands = {
 		"full-upgrade performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.",
 
 		install =
-		"install is used to instruct the package manager to get the necesary files to install one or more specified packages\nA specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from a specific release can be selected by following the package name with a forward slash (/) and codename (bullseye, bookworm, sid ...) or suite name (stable, testing, unstable). This will also selectversions from this release for dependencies of this package if needed to satisfy the request.",
+		"install is used to instruct the package manager to get the necesary files to install one or more specified packages. A specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from a specific release can be selected by following the package name with a forward slash (/) and codename (bullseye, bookworm, sid ...) or suite name (stable, testing, unstable). This will also selectversions from this release for dependencies of this package if needed to satisfy the request.",
 
 		remove = "remove is used to get rid of a given set of packages (TODO: dependency recursion).",
 
