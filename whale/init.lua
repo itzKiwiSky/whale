@@ -4,9 +4,14 @@ require("whale.src.utils.StringTools")
 require("whale.src.utils.Switch")
 require("whale.src.utils.TermColors")
 require("whale.src.utils.ColoredWrite")
-argparse = require 'whale.src.argparse'
+lfs = require 'lfs'
+language = require 'whale.src.utils.Language'
+command = require 'whale.src.Command'
+help = require 'whale.src.Help'
 
-local p = argparse("command")
-local a = p:parse()
+local function main(args)
+    command.init()
+    command.run(args)
+end
 
-print("aa")
+main(arg)
