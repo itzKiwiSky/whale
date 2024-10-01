@@ -1,4 +1,13 @@
 local commands = {
+	shortCliHelp = {
+		update = "Update source indexes",
+		upgrade = "Upgrade packages",
+		fullUpgrade = "Upgrade ocean manager",
+		install = "Install a set of packages",
+		remove = "Removes a set of packages",
+		show = "Shows the info of a package",
+		help = "Show help articles for a given command"
+	},
 	cliHelp = {
 		update =
 		"update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about all packages available for installation.",
@@ -17,6 +26,7 @@ local commands = {
 		show =
 		"Show information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more. It can e.g. be helpful to look at this information before allowing whale to remove a package or while searching for new packages to install.",
 
+		help = [[Whale is a lovely package for the love framework.]]
 	}
 }
 return commands
