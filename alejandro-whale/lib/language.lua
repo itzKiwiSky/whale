@@ -17,8 +17,8 @@ local sanitizeFilter = { "string", "table", "number" }
 
 local function getData(path, lastTable)
 	local nest = {}
-	local lastTable = lastTable or actualLang
 	local value
+	if not lastTable then lastTable = actualLang end
 	if path then
 		for word in path:gmatch("[^.]+") do
 			table.insert(nest, word)

@@ -1,11 +1,11 @@
 local argparse = require("argparse")
-local colorize = require("lib.colorize")
+local colorize = require("lib.util.colorize")
 
 --Shortcut
 local lang = _G.Language
 
 --The parser class
-local parser = argparse("whale", colorize(lang.getString("argparseName")))
+local parser = argparse("whale", colorize(lang.getString("argparseName"))):require_command(false)
 
 local update = parser:command("update --update", lang.getString("commands.shortCliHelp.update"))
 update:argument("soourceUpdateList"):args("*")

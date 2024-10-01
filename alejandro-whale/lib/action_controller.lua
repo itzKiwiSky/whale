@@ -16,3 +16,10 @@ function actions.initializeOcean(projectPath)
 	local success = false
 	return success
 end
+
+---Runs based off of the parameters given by the user
+function actions.run(arguments)
+
+end
+
+return actions

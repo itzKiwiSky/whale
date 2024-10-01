@@ -1,7 +1,6 @@
----Contains general ANSI codes to control the terminal
----@type table
 local termColors = {
 	reset = "\27[0m",
+
 	-- Standard foreground colors
 	black = "\27[30m",
 	red = "\27[31m",
@@ -11,6 +10,7 @@ local termColors = {
 	magenta = "\27[35m",
 	cyan = "\27[36m",
 	white = "\27[37m",
+
 	-- Bright foreground colors
 	brightBlack = "\27[90m",
 	brightRed = "\27[91m",
@@ -20,6 +20,7 @@ local termColors = {
 	brightMagenta = "\27[95m",
 	brightCyan = "\27[96m",
 	brightWhite = "\27[97m",
+
 	-- Standard background colors
 	bgBlack = "\27[40m",
 	bgRed = "\27[41m",
@@ -29,6 +30,7 @@ local termColors = {
 	bgMagenta = "\27[45m",
 	bgCyan = "\27[46m",
 	bgWhite = "\27[47m",
+
 	-- Bright background colors
 	bgBrightBlack = "\27[100m",
 	bgBrightRed = "\27[101m",
@@ -38,13 +40,13 @@ local termColors = {
 	bgBrightMagenta = "\27[105m",
 	bgBrightCyan = "\27[106m",
 	bgBrightWhite = "\27[107m",
+
 	-- special ones
 	bold = "\27[1m",
 	underline = "\27[4m",
 	blink = "\27[5m",
 	invert = "\27[7m",
 	hidden = "\27[8m",
-
 }
 
 return termColors

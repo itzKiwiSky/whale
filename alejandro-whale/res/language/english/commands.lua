@@ -1,6 +1,5 @@
 local commands = {
 	errors = {
-		verboseOrQuietParadox = "You must choose either verbose or quiet output.",
 	},
 	shortCliHelp = {
 		update = "Update source indexes",
@@ -29,7 +28,10 @@ local commands = {
 		show =
 		"Show information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more. It can e.g. be helpful to look at this information before allowing whale to remove a package or while searching for new packages to install.",
 
-		help = [[Whale is a lovely package for the love framework.]]
+		help = [[Whale is a lovely package for the love framework.]],
+
+		noCommandProvide =
+		"{bold}{underline}{brightCyan}Whale{reset}. The{bold}{brightMagenta} Lövely {reset}Package manager",
 	}
 }
 return commands
