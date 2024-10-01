@@ -1,7 +1,7 @@
 return {
     name = "sync",
     category = "packages",
-    description = "describe",
+    description = "Syncronize the packages",
     alias = {"wsync", "synchronize"},
     action = function(args)
         

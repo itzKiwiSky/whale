@@ -1,8 +1,6 @@
 local Command = {}
 
-Command.commands = {
-    categories = {},
-}
+Command.commands = {}
 
 --- Checks if a path is a directory
 --- @param path string Path to check.
@@ -49,9 +47,9 @@ function Command.init()
         --cmdTables[(filename:gsub(".lua", "")):lower()] = require((files[f]:gsub("/", ".")):gsub(".lua", ""))
     end
 
-    print("------")
-    print(debug.formattable(Command.commands))
-    print("------")
+    --print("------")
+    --print(debug.formattable(Command.commands))
+    --print("------")
 end
 
 function Command.run(task)
