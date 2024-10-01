@@ -4,18 +4,44 @@ local colorize = require("lib.colorize")
 --Shortcut
 local lang = _G.Language
 
+--The parser class
 local parser = argparse("whale", colorize(lang.getString("argparseName")))
-parser:option("--update update", lang.getString("commands.shortCliHelp.update"))
-parser:option("--upgrade upgrade", lang.getString("commands.shortCliHelp.upgrade"))
-parser:option("--full-upgrade full-upgrade", lang.getString("commands.shortCliHelp.fullUpgrade"))
-parser:option("--update update", lang.getString("commands.shortCliHelp.update"))
-parser:option("--install install", lang.getString("commands.shortCliHelp.install"))
-parser:option("--show show", lang.getString("commands.shortCliHelp.show"))
 
-parser:option("--help help h", lang.getString("commands.shortCliHelp.help"))
+local update = parser:command("update --update", lang.getString("commands.shortCliHelp.update"))
+update:argument("soourceUpdateList"):args("*")
+
+local updgrade = parser:command("--upgrade updgrade", lang.getString("commands.shortCliHelp.upgrade"))
+updgrade:argument("packageUpgradeList"):args("+")
+
+local fullUpgrade = parser:command("--full-upgrade", lang.getString("commands.shortCliHelp.fullUpgrade"))
+
+local install = parser:command("install --install i", lang.getString("commands.shortCliHelp.install"))
+install:argument("packageInstallList"):args("+")
+
+local show = parser:command("show --show", lang.getString("commands.shortCliHelp.show"))
+show:argument("packageShowList"):args("+")
+
+local help = parser:command("help --help h", lang.getString("commands.shortCliHelp.help"))
+help:argument("helpArticle")
+	:choices({
+		"update",
+		"upgrade",
+		"full-upgrade",
+		"install",
+		"show",
+	})
+	:args("*")
+
+
+--mutex: mutually exclusive, so only one shall be on the command.
+parser:mutex(
+	parser:flag("-q --quiet"),
+	parser:flag("-v --verbose")
+)
 
 ---The arguments already parsed as a table
 ---@type table
 local args = parser:parse()
+
 
 return args

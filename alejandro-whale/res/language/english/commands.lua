@@ -1,4 +1,7 @@
 local commands = {
+	errors = {
+		verboseOrQuietParadox = "You must choose either verbose or quiet output.",
+	},
 	shortCliHelp = {
 		update = "Update source indexes",
 		upgrade = "Upgrade packages",
