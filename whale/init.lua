@@ -5,7 +5,7 @@ require("whale.src.utils.Switch")
 require("whale.src.utils.TermColors")
 require("whale.src.utils.ColoredWrite")
 
-local lfs = require('lfs')
+lfs = require('lfs')
 local serpent = require("serpent")
 local language = require("whale.src.utils.Language")
 local command = require("whale.src.Command")
