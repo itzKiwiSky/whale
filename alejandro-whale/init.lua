@@ -22,6 +22,13 @@ do --Control: the game
 	print(serpent.block(arguments))
 end
 
+do
+	require("lib.util.os")
+	colorize = require("lib.util.colorize")
+	local content = os.readAll("res/drawable/whaletiny.txt")
+	io.stdout:write("\n")
+	io.stdout:write(colorize(content))
+end
 
 
 

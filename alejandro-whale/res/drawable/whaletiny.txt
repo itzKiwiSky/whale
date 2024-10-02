@@ -1,0 +1,15 @@
+{brightCyan}            .__%iiii==__
+         .<%nnonvnvnnoonvi,
+       _innnnnnnnnvnnnnnvnvs,
+      <vnvnvnvnvnvnnvnnvnnnnv%.
+     <vnnnnnnn{black}o{brightCyan}nnnnvnnvnn{black}o{brightCyan}nvnvi.
+    =nnnvnvnvnnnvnvnnnnnvnnnnns=
+.  .vvvnnn{brightRed}n{brightCyan}vnvnvnn nv vnnnv{brightRed}n{brightCyan}vvvl
+v=_ivnnnvnvnnvnnnvn  vnnvnnnnnvl
+vv}{vnnvnnnnvilnnnnnvvvnnvnvilv>
+|~  +vvnnvnvnnnnnvnvnnnnvnnnnni
+     -Innnnnnnvnvnnnvnvnnnvnv>-
+      -+IvnvnvnnnnvnnnnnvnvI+
+         ~<vnnnvnvnnvnvvv}~-
+            -^"{*ll}}+"--
+{reset}

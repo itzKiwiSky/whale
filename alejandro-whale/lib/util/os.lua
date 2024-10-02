@@ -1,4 +1,4 @@
-local termColors = require("lib.termcolors")
+local termColors = require("lib.util.termcolors")
 local oldexit = os.exit
 
 
@@ -15,4 +15,11 @@ local oldexit = os.exit
 function os.exit(code, close)
 	io.stdout:write(termColors[reset])
 	oldexit(code, close)
+end
+
+function os.readAll(file)
+	local f = assert(io.open(file, "rb"))
+	local content = f:read("*all")
+	f:close()
+	return content
 end
