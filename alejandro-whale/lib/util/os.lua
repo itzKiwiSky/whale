@@ -17,8 +17,23 @@ function os.exit(code, close)
 	oldexit(code, close)
 end
 
-function os.readAll(file)
+---Reads a entire file in binary mode and returns it's content.
+---@param file string path to file.
+---@return string content The file binary contents.
+---@nodiscard
+function os.readAllb(file)
 	local f = assert(io.open(file, "rb"))
+	local content = f:read("*all")
+	f:close()
+	return content
+end
+
+---Reads a entire file and returns it's content.
+---@param file string path to file.
+---@return string content The file contents.
+---@nodiscard
+function os.readAll(file)
+	local f = assert(io.open(file, "r"))
 	local content = f:read("*all")
 	f:close()
 	return content

@@ -1,6 +1,7 @@
 ---Detects the system is running on, tries first
 ---unsing jit then tries to execute uname and then gives up and assumes that is Windows
 ---@return string system The os name: `GNU/Linux` or `Windows` depending the case.
+---@nodiscard
 local function detectSystem()
 	-- ask LuaJIT first
 	---@diagnostic disable-next-line: undefined-global

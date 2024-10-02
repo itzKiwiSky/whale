@@ -1,3 +1,5 @@
+---Extra terminal codes for terminals that support them.
+---@enum terminal_extended
 local extended = {
 	bold = "\27[1m",
 	blink = "\27[5m",

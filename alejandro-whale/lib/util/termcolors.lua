@@ -1,3 +1,5 @@
+---Terminal colors
+---@enum terminal_colors
 local termColors = {
 	reset = "\27[0m",
 
