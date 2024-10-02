@@ -2,7 +2,6 @@ local termColors = require("lib.util.termcolors")
 local extended = require("lib.util.extended_ansi")
 local system = require("lib.util.detect_system")()
 
-local serpent = require("serpent")
 
 ---Takes a sring with a python `{key}content` like format where those key are changed with the ansi terminal color codes
 ---@param str string Plain text with the commands human readable.
