@@ -1,5 +1,8 @@
 local Help = {}
 
+--{brightMagenta}@
+
+
 local function convertToHelp(inputtbl)
     local h = {}
     for key, cmd in pairs(inputtbl) do
@@ -13,8 +16,33 @@ local function convertToHelp(inputtbl)
     return h
 end
 
+function Help.version()
+    local logo = [[
+{brightCyan}            .__%iiii==__
+         .<%nnonvnvnnoonvi,
+       _innnnnnnnnvnnnnnvnvs,
+      <vnvnvnvnvnvnnvnnvnnnnv%.
+     <vnnnnnnn{black}o{brightCyan}nnnnvnnvnn{black}o{brightCyan}nvnvi.
+    =nnnvnvnvnnnvnvnnnnnvnnnnns=
+.  .vvvnnn{brightMagenta}n{brightCyan}vnvnvnn nv vnnnv{brightMagenta}n{brightCyan}vvvl
+v=_ivnnnvnvnnvnnnvn  vnnvnnnnnvl
+vv}{vnnvnnnnvilnnnnnvvvnnvnvilv>
+|~  +vvnnvnvnnnnnvnvnnnnvnnnnni
+     -Innnnnnnvnvnnnvnvnnnvnv>-
+      -+IvnvnvnnnnvnnnnnvnvI+
+         ~<vnnnvnvnnvnvvv}~-
+            -^"{*ll}}+"--
+{reset}
+]]
+
+io.printf(logo .. "\n")
+
+io.printf("{bold}{underline}{brightCyan}Whale{reset}. The{bold}{brightMagenta} Lövely {reset}Package manager\n\n")
+end
+
 function Help.msg()
-    io.printf("{bold}{underline}{brightCyan}Whale{reset}. The{bold}{brightMagenta} Lövely {reset}Package manager\n\n")
+
+    help.version()
 
     local helptbl = convertToHelp(command.commands)
     --print(debug.formattable(helptbl))
