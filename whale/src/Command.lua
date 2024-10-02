@@ -44,12 +44,7 @@ function Command.init()
     for f = 1, #files, 1 do
         local filename = files[f]:match("[^/]+$")
         Command.commands[(filename:gsub(".lua", "")):lower()] = require((files[f]:gsub("/", ".")):gsub(".lua", ""))
-        --cmdTables[(filename:gsub(".lua", "")):lower()] = require((files[f]:gsub("/", ".")):gsub(".lua", ""))
     end
-
-    --print("------")
-    --print(debug.formattable(Command.commands))
-    --print("------")
 end
 
 function Command.run(task)
